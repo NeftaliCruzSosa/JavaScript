@@ -35,7 +35,7 @@ console.log(rickAndMortyCharacters);
 const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
 
 let lastItem = rickAndMortyCharacters.pop();
-console.log(lastItem);
+console.log(rickAndMortyCharacters[0], lastItem);
 
 // 1.6 Elimina el segundo elemento del array y muestra el array por consola.
 // const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
