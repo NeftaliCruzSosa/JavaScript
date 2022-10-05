@@ -5,18 +5,24 @@
 // Puedes usar este array para probar tu función:
 
 const nameFinder = [
-    'Peter',
-    'Steve',
-    'Tony',
-    'Natasha',
-    'Clint',
-    'Logan',
-    'Xabier',
-    'Bruce',
-    'Peggy',
-    'Jessica',
-    'Marc'
-  ];
-  function finderName(param) {
-    // insert code
-  }
+  'Peter',
+  'Steve',
+  'Tony',
+  'Natasha',
+  'Clint',
+  'Logan',
+  'Xabier',
+  'Bruce',
+  'Peggy',
+  'Jessica',
+  'Marc'
+];
+
+function finderName(param, value) {
+  let result = param.indexOf(value);
+  if (result >= 0){
+    return `la posición de ${value} es ${result}`
+  } return false
+}
+
+finderName(nameFinder, "Steve")

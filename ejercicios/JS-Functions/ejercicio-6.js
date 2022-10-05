@@ -17,6 +17,14 @@ const duplicates = [
     'pasta',
     'soda'
   ];
-  function removeDuplicates(param) {
-    // insert code
-  }
+
+function removeDuplicates(param) {
+  // filter recibe una funcion y devuelve un nuevo array con todos los elementos que cumplan la condicion
+	return param.filter(function(value, index){
+    // value representa param[i] de un bucle for
+    // index representa i de un bucle for
+		return param.indexOf(value) === index
+		});
+}
+
+console.log(removeDuplicates(duplicates))

@@ -4,18 +4,29 @@
 // Puedes usar este array para probar tu función:
 
 const counterWords = [
-    'code',
-    'repeat',
-    'eat',
-    'sleep',
-    'code',
-    'enjoy',
-    'sleep',
-    'code',
-    'enjoy',
-    'upgrade',
-    'code'
-  ];
-  function repeatCounter(param) {
-    // insert code
-  }
+  "code",
+  "repeat",
+  "eat",
+  "sleep",
+  "code",
+  "enjoy",
+  "sleep",
+  "code",
+  "enjoy",
+  "upgrade",
+  "code",
+];
+
+function repeatCounter(param) {
+  let result = {};
+  param.forEach((element) => {
+    if (!result.hasOwnProperty(element)) {
+      result[element] = 1;
+    } else {
+      result[element]++;
+    }
+  });
+  return result;
+}
+
+repeatCounter(counterWords);
