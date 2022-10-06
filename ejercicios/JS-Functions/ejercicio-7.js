@@ -21,8 +21,8 @@ const nameFinder = [
 function finderName(param, value) {
   let result = param.indexOf(value);
   if (result >= 0){
-    return `la posición de ${value} es ${result}`
+    return `${true}, la posición de ${value} es ${result}`
   } return false
 }
 
-finderName(nameFinder, "Steve")
+console.log(finderName(nameFinder, "Steve"))

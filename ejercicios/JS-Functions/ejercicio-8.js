@@ -29,4 +29,4 @@ function repeatCounter(param) {
   return result;
 }
 
-repeatCounter(counterWords);
+console.log(repeatCounter(counterWords))
