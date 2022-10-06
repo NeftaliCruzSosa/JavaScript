@@ -38,3 +38,18 @@ const users = [
         }
     },
 ]
+
+const timesFavourite = {};
+
+  for (user of users) {
+
+    for (sound in user.favoritesSounds){
+      if (!timesFavourite.hasOwnProperty(sound)) {
+        timesFavourite[sound] = 1;
+      } else {
+        timesFavourite[sound]++;
+      }
+    };
+}
+
+console.log(timesFavourite)
