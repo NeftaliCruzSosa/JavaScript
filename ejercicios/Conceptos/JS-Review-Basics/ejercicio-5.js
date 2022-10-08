@@ -6,8 +6,6 @@
 // Si no se te ocurre como hacer un numero aleatorio no te preocupes!
 // busca información sobre la función de javascript Math.random();
 
-function rollDice(faces) {
-    return Math.round(Math.random() * faces)
-}
+const rollDice = (faces) => Math.ceil(Math.random() * faces)
 
 console.log(rollDice(7))
