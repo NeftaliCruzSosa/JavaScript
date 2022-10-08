@@ -34,10 +34,8 @@ const users = [
 
 let totalVolume = 0;
 for (const user of users){
-  for (volume of Object.values(user.favoritesSounds)){
-  
-    totalVolume += volume.volume
-  
+  for (const sound in user.favoritesSounds) {
+    totalVolume += user.favoritesSounds[sound].volume
   }
 }
 
