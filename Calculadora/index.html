@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="screen">
+                <div class="firstLine">
+                    <span class="last-operation">
+                    12 * 5
+                    </span>
+                </div>
+                
+                <div class="secondLine">
+                    <h2 id="firstNumber" class="actual-operation"></h2>
+                    <h2 id="operator" class="actual-operation"></h2>
+                    <h2 id="secondNumber" class="actual-operation"></h2>
+                </div>
+            </div>
+            <div class="numbers-wrapper">
+                <ul class="numbers-ul">
+                    <li id="num7">7</li>
+                    <li id="num8">8</li>
+                    <li id="num9">9</li>
+                    <li id="num4">4</li>
+                    <li id="num5">5</li>
+                    <li id="num6">6</li>
+                    <li id="num1">1</li>
+                    <li id="num2">2</li>
+                    <li id="num3">3</li>
+                    <li id="num0">0</li>
+                    <li id="comma">,</li>
+                    <li id="equal">=</li>
+                </ul>
+                <ul class="operators-ul">
+                    <li id="backspace"><img src="./backspace.png" alt="backspace"></li>
+                    <li id="division"><img src="./division.png" alt="division"></li>
+                    <li id="mul"><img src="./mul.png" alt="mul"></li>
+                    <li id="sub"><img src="./sub.png" alt="sub"></li>
+                    <li id="add"><img src="./add.png" alt="add"></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

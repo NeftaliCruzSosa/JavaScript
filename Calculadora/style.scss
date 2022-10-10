@@ -1,0 +1,76 @@
+@import "reset.scss";
+
+body {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    background-color: #070A2B;
+    border-radius: 25px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    background-color: #182E68;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 25px 25px 0 0;
+
+    .last-operation {
+        font-size: 1rem;
+        padding-right: 1.5rem;
+    }
+
+    .actual-operation {
+        font-size: 3.5rem;
+    }
+    
+    .secondLine {
+        display: flex;
+        padding: 1.5rem;
+    }
+}
+
+.numbers-wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    height: 100%;
+
+    .numbers-ul {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 100%;
+        align-items: center;
+
+        li {
+            font-size: 2.5rem;
+            padding: 2rem;
+        }
+    }
+
+    .operators-ul {
+        background-color: #0B183B;
+        height: 100%;
+        width: 100%;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            text-align: center;
+            padding: 1.2rem;
+        }
+    }
+}
