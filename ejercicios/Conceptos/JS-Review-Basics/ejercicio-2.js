@@ -33,12 +33,14 @@ const users = [
 ];
 
 let totalVolume = 0;
+let nVolumes = 0;
 for (const user of users){
   for (const sound in user.favoritesSounds) {
-    totalVolume += user.favoritesSounds[sound].volume
+    totalVolume += user.favoritesSounds[sound].volume;
+    nVolumes++;
   }
 }
 
-let averageVolume = totalVolume / users.length;
+let averageVolume = totalVolume / nVolumes;
 
 console.log(averageVolume)
