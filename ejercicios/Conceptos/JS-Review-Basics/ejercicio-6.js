@@ -8,13 +8,15 @@
 
 const words = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'];
 
-function swap (arr, index1, index2) {
-	let tmpWord = words[index1];
-  arr[index1] = arr[index2];
-  arr[index2] = tmpWord;
+// function swap (arr, index1, index2) {
+// 	let tmpWord = words[index1]; // Guardamos la palabra del primer indice
+//   arr[index1] = arr[index2]; // Modificamos el valor del primer indice por la del segundo
+//   arr[index2] = tmpWord; // Modificamos el valor del segundo indice por la palabra guardada como tmpWord
   
-}
+// }
 
-swap(words, 2, 3)
+const swap = (arr, i1, i2) => arr[i1] = arr.splice(i2, 1, arr[i1])[0]
+
+swap(words, 0, 3)
 
 console.log(words)
