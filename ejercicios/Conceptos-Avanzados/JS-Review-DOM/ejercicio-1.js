@@ -1,43 +1,91 @@
-// Dado el siguiente HTML:
-
-
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <script src="exercise-1.js" defer></script>
-//     <title>Document</title>
-// </head>
-// <body>
-//     <p class="fn-remove-me">Bye bye</p>
-// 		<div data-function="printHere"></div>
-// </body>
-// </html>
-
-
-// 1.1 Basandote en el array siguiente, crea una lista ul > li 
-// dinámicamente en el html que imprima cada uno de los paises.
-// const countries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela'];
-
-// 1.2 Elimina el elemento que tenga la clase .fn-remove-me.
-
-// 1.3 Utiliza el array para crear dinamicamente una lista ul > li de elementos 
-// en el div de html con el atributo data-function="printHere".
-// const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola'];
-
-// 1.4 Crea dinamicamente en el html una lista de div que contenga un elemento 
-// h4 para el titulo y otro elemento img para la imagen.
-// const countries = [
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3'},
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
-// ];
-
-// 1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último 
-// elemento de la lista.
-
-// 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
-// elementos de las listas que elimine ese mismo elemento del html.
+//1.1 Basandote en el array siguiente, crea una lista ul > li
+//dinámicamente en el html que imprima cada uno de los paises.
+const countries = ["Japón", "Nicaragua", "Suiza", "Australia", "Venezuela"];
+ 
+const ul$$ = document.createElement("ul");
+ 
+for (country of countries) {
+  let li$$ = document.createElement("li");
+  li$$.textContent = country;
+  ul$$.appendChild(li$$);
+}
+document.body.appendChild(ul$$);
+ 
+//1.2 Elimina el elemento que tenga la clase .fn-remove-me.
+ 
+const removeElement$$ = document.querySelector(".fn-remove-me");
+removeElement$$.remove();
+ 
+//1.3 Utiliza el array para crear dinamicamente una lista ul > li de elementos
+//en el div de html con el atributo data-function="printHere".
+ 
+const cars = ["Mazda 6", "Ford fiesta", "Audi A4", "Toyota corola"];
+ 
+const ul2$$ = document.createElement("ul");
+ 
+for (const car of cars) {
+  let li1$$ = document.createElement("li");
+  li1$$.textContent = car;
+  ul2$$.appendChild(li1$$);
+}
+ 
+const div$$ = document.querySelector('[data-function="printHere"]');
+div$$.appendChild(ul2$$);
+ 
+//1.4 Crea dinamicamente en el html una lista de div que contenga un elemento
+//h4 para el titulo y otro elemento img para la imagen.
+ 
+const countries2 = [
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=1" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=2" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=3" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=4" },
+  { title: "Random title", imgUrl: "https://picsum.photos/300/200?random=5" },
+];
+ 
+const ul3$$ = document.createElement("ul");
+ 
+for (const country2 of countries2) {
+  let countryDiv$$ = document.createElement("div");
+  
+  let h4$$ = document.createElement("h4");
+  h4$$.textContent = country2.title;
+  let img$$ = document.createElement("img");
+  img$$.src = country2.imgUrl;
+ 
+  countryDiv$$.appendChild(h4$$);
+  countryDiv$$.appendChild(img$$);
+ 
+  document.body.appendChild(countryDiv$$);
+}
+ 
+//1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último
+//elemento de la lista.
+ 
+const button$$ = document.createElement("button");
+ 
+button$$.textContent = "Púlsame!!!";
+button$$.style.padding = "15px";
+ 
+button$$.addEventListener("click", () => {
+  const divs$$ = document.querySelectorAll("div");
+  if (divs$$.length === 6) divs$$[divs$$.length - 1].remove();
+});
+ 
+document.body.appendChild(button$$);
+ 
+//1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los
+//elementos de las listas que elimine ese mismo elemento del html.
+const divs$$ = document.querySelectorAll("div");
+let firstDiv = divs$$[0];
+ 
+for (const div of divs$$) {
+  let button2$$ = document.createElement("button");
+ 
+  button2$$.textContent = "Elimíname";
+  button2$$.style.padding = "15px";
+  if(div !== firstDiv) div.appendChild(button2$$);
+  button2$$.addEventListener("click", () => {
+    div.remove();
+  });
+}
